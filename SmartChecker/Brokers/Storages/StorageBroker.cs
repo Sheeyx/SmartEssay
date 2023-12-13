@@ -56,7 +56,7 @@ public partial class StorageBroker : EFxceptionsContext, IStorageBroker
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        string connectionString = this.configuration.GetConnectionString(name: "DefaultConnection");
-        optionsBuilder.UseSqlServer("Data source = EssayChecker.db");
+        string connectionString = "Data source = EssayChecker.db";
+        optionsBuilder.UseSqlite(connectionString);
     }
 }

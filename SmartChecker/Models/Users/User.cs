@@ -5,8 +5,8 @@ namespace SmartChecker.Models.Users;
 
 public class User
 {
-    public Guid Id;
-    public string Name;
+    public Guid Id { get; set; }
+    public string Name { get; set; }
     [JsonIgnore]
     public List<Essay> Essays { get; set; }
 }
